@@ -5,8 +5,9 @@ package vmworkflow
 
 import (
 	"fmt"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/guestoscustomizations"
 	"log"
+
+	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/guestoscustomizations"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
@@ -211,9 +212,9 @@ func validateCloneSnapshots(props *mo.VirtualMachine) error { // Ensure that the
 	// 	return fmt.Errorf("virtual machine %s's root snapshot must not have children", props.Config.Uuid)
 	// }
 	// Current snapshot must match root snapshot (this should be the case anyway)
-	if props.Snapshot.CurrentSnapshot.Value != props.Snapshot.RootSnapshotList[0].Snapshot.Value {
-		return fmt.Errorf("virtual machine %s's current snapshot must match root snapshot", props.Config.Uuid)
-	}
+	// if props.Snapshot.CurrentSnapshot.Value != props.Snapshot.RootSnapshotList[0].Snapshot.Value {
+	// 	return fmt.Errorf("virtual machine %s's current snapshot must match root snapshot", props.Config.Uuid)
+	// }
 	return nil
 }
 
