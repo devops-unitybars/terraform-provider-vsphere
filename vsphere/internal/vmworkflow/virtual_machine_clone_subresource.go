@@ -207,9 +207,9 @@ func validateCloneSnapshots(props *mo.VirtualMachine) error { // Ensure that the
 		return fmt.Errorf("virtual machine %s must have exactly one root snapshot (has: %d)", props.Config.Uuid, len(props.Snapshot.RootSnapshotList))
 	}
 	// Check to make sure the root snapshot has no children
-	if len(props.Snapshot.RootSnapshotList[0].ChildSnapshotList) > 0 {
-		return fmt.Errorf("virtual machine %s's root snapshot must not have children", props.Config.Uuid)
-	}
+	// if len(props.Snapshot.RootSnapshotList[0].ChildSnapshotList) > 0 {
+	// 	return fmt.Errorf("virtual machine %s's root snapshot must not have children", props.Config.Uuid)
+	// }
 	// Current snapshot must match root snapshot (this should be the case anyway)
 	if props.Snapshot.CurrentSnapshot.Value != props.Snapshot.RootSnapshotList[0].Snapshot.Value {
 		return fmt.Errorf("virtual machine %s's current snapshot must match root snapshot", props.Config.Uuid)

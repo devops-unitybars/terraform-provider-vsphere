@@ -7,6 +7,8 @@
 
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/hashicorp/terraform-provider-vsphere?label=release&style=for-the-badge)](https://github.com/hashicorp/terraform-provider-vsphere/releases/latest) [![License](https://img.shields.io/github/license/hashicorp/terraform-provider-vsphere.svg?style=for-the-badge)](LICENSE)
 
+Notice: This fork exists for the sole purpose of disabling child snapshot verification during the creation of linked clones.
+
 The Terraform Provider for VMware vSphere is a plugin for Terraform that allows you to interact with VMware vSphere, notably [vCenter Server][vmware-vcenter] and [ESXi][vmware-esxi]. This provider can be used to manage a VMware vSphere environment, including virtual machines, host and cluster management, inventory, networking, storage, datastores, content libraries, and more.
 
 Learn more:
